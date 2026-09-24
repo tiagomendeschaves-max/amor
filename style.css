@@ -1,1 +1,79 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --cor-fundo: #021B0B;        /* Verde bem escuro */
+    --cor-principal: #092C15;    /* Verde floresta */
+    --cor-secundaria: #134B24;   /* Verde médio */
+    --cor-destaque: #2EFF7B;     /* Verde neon brilhante */
+    --cor-texto: #FFFFFF;        /* Branco puro */
+    --cor-suave: #D1F8DF;        /* Verde claro suave */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    box-shadow: 0 0 20px rgba(46, 255, 123, 0.2);
+}
+
+h1, .caixa-perguntas, .caixa-resultado {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+h1 {
+    color: var(--cor-destaque);
+}
+
+p {
+    color: var(--cor-suave);
+    line-height: 1.6;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 15px;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    box-shadow: 0 0 12px var(--cor-destaque);
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
